@@ -12,4 +12,13 @@ FactoryBot.define do
     birthday    Faker::Date.birthday
     fav_color   Faker::Color.color_name
   end
+
+  factory :astronaut do
+    name            Faker::Name.name
+    fav_food        Faker::Food.dish
+    planet_visited  Faker::Space.planet
+    fav_nebula      Faker::Space.nebula
+    age             Faker::Number.between(25, 70)
+  end
+
 end
