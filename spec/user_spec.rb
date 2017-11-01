@@ -11,9 +11,19 @@ RSpec.describe User do
   end
 
   describe 'attribute methods' do
+
+    user = nil
+    before(:each) { user = build(:user) }
+
     it "#name returns the User's name" do
-      user = build(:user)
-      expect { user.name }.not_to throw_error
+      expect { user.name }.not_to raise_error
+      expect(user.name).to be_a(String)
     end
+
+    it "#name= resets the User's name" do
+      expect { user.name = 'Joey' }.not_to raise_error
+      expect(user.name).to eq('Joey')
+    end
+  end
 
 end

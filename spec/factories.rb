@@ -8,7 +8,7 @@ FactoryBot.define do
     password    Faker::Internet.password
     tel_num     Faker::PhoneNumber.phone_number
     ss          Faker::Number.number(9)
-    url         Faker::Internet.domain_name
+    url         Faker::Internet.url
     birthday    Faker::Date.birthday
     fav_color   Faker::Color.color_name
   end
